@@ -10,16 +10,16 @@
 # RStudio files
 .Rproj.user/
 .Rproj.user
+*.Rproj
 
 ## Redundant data files
 Source_Classification_Code.rds
 summarySCC_PM25.rds
 
-## Cached files
-/plot1_cache
+## Cached files (knitr)
 /*_cache
 
-## Knitr files
+## Other knitr files
 *-tikzDictionary
 *.aux
 *.log
@@ -33,3 +33,4 @@ knitr-spin.html
 /.Rhistory
 /inst/examples/*.tex
 /inst/examples/*.sty
+
