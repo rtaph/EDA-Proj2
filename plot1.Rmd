@@ -1,0 +1,41 @@
+---
+title: "Reproducible Research: Peer Assessment 2"
+output: 
+  html_document:
+    keep_md: true
+---
+## Data Processing
+We begin by loading libraries and setting a few global parameters:
+```{r chunckGlobalOpts}
+  library(knitr)
+  opts_chunk$set(echo=TRUE, cache=TRUE)
+  setwd("~/datasciencecoursera/RepResProj2/")
+```
+
+We first download and unzip the data (if necessary):
+```{r chunkCheckFile}
+  #Download file if it does not exist
+  if (!file.exists("exdata-data-NEI_data.zip")) {
+      message("Downloading data...")
+      fileURL <- "http://goo.gl/FWZqTP"
+      zipfile = "exdata-data-NEI_data.zip"
+      download.file(fileURL, destfile=zipfile, method="curl")
+      unzip(zipfile)
+  }
+```
+
+We then read the data into R
+```{r chunkReadData}
+  # Load the csv files and assign it to a variable
+  NEI   = readRDS("summarySCC_PM25.rds")
+  SCC   = readRDS("Source_Classification_Code.rds")
+```
+
+## PLOT 1
+
+
+## System Info
+```{r}
+sessionInfo()
+```
+
