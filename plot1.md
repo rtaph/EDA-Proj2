@@ -29,8 +29,57 @@ We then read the data into R
   SCC   = readRDS("Source_Classification_Code.rds")
 ```
 
+The data contains
+
+```r
+  str(NEI)
+```
+
+```
+## 'data.frame':	6497651 obs. of  6 variables:
+##  $ fips     : chr  "09001" "09001" "09001" "09001" ...
+##  $ SCC      : chr  "10100401" "10100404" "10100501" "10200401" ...
+##  $ Pollutant: chr  "PM25-PRI" "PM25-PRI" "PM25-PRI" "PM25-PRI" ...
+##  $ Emissions: num  15.714 234.178 0.128 2.036 0.388 ...
+##  $ type     : chr  "POINT" "POINT" "POINT" "POINT" ...
+##  $ year     : int  1999 1999 1999 1999 1999 1999 1999 1999 1999 1999 ...
+```
+
 ## PLOT 1
 
+### The Question
+Have total emissions from PM2.5 decreased in the United States from 1999 to 2008? Using the base plotting system, make a plot showing the total $\sf{PM_{2.5}}$ emission from all sources for each of the years 1999, 2002, 2005, and 2008.
+
+### The Analysis
+
+```r
+  hist(NEI$year)
+```
+
+![](./plot1_files/figure-html/unnamed-chunk-2-1.png) 
+
+
+```r
+  ## Plot historgram and save PNG
+  names(NEI)
+```
+
+```
+## [1] "fips"      "SCC"       "Pollutant" "Emissions" "type"      "year"
+```
+
+
+```r
+  ## Plot historgram and save PNG
+  png("plot1.png", width = 480, height = 480)
+  #plot
+  dev.off()
+```
+
+```
+## pdf 
+##   2
+```
 
 ## System Info
 
@@ -56,4 +105,3 @@ sessionInfo()
 ## [5] htmltools_0.2.6 rmarkdown_0.3.3 stringr_0.6.2   tools_3.1.1    
 ## [9] yaml_2.1.13
 ```
-

@@ -31,11 +31,36 @@ We then read the data into R
   SCC   = readRDS("Source_Classification_Code.rds")
 ```
 
+The data contains
+```{r}
+  str(NEI)
+```
+
 ## PLOT 1
 
+### The Question
+Have total emissions from PM2.5 decreased in the United States from 1999 to 2008? Using the base plotting system, make a plot showing the total $\sf{PM_{2.5}}$ emission from all sources for each of the years 1999, 2002, 2005, and 2008.
+
+### The Analysis
+```{r}
+  hist(NEI$year)
+```
+
+```{r}
+  ## Plot historgram and save PNG
+  names(NEI)
+
+```
+
+```{r}
+  ## Plot historgram and save PNG
+  png("plot1.png", width = 480, height = 480)
+  #plot
+  dev.off()
+
+```
 
 ## System Info
 ```{r}
 sessionInfo()
 ```
-
